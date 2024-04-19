@@ -3,8 +3,8 @@ plugins {
 }
 
 allprojects {
-    group = "io.github.pseudoankit"
-    version = (System.getenv("RELEASE_TAG_NAME") ?: "1.7.1-SNAPSHOT").replace("v", "")
+    group = "com.github.nurdinm"
+    version = (System.getenv("RELEASE_TAG_NAME") ?: "1.0").replace("v", "")
 }
 
 nexusPublishing {

@@ -3,7 +3,7 @@ plugins {
     signing
 }
 
-val projectUrl = "https://github.com/pseudoankit/coachmark"
+val projectUrl = "https://github.com/nurdinm/coachmark"
 
 publishing {
     // Configure all publications
@@ -46,14 +46,14 @@ publishing {
     }
 }
 
-signing {
-    useInMemoryPgpKeys(
-        System.getenv("OSS_SIGNING_KEY_ID"),
-        System.getenv("OSS_SIGNING_KEY"),
-        System.getenv("OSS_SIGNING_PASSWORD"),
-    )
-    sign(publishing.publications)
-}
+//signing {
+//    useInMemoryPgpKeys(
+//        System.getenv("OSS_SIGNING_KEY_ID"),
+//        System.getenv("OSS_SIGNING_KEY"),
+//        System.getenv("OSS_SIGNING_PASSWORD"),
+//    )
+//    sign(publishing.publications)
+//}
 
 // TODO: remove after https://youtrack.jetbrains.com/issue/KT-46466 is fixed
 project.tasks.withType(AbstractPublishToMaven::class.java).configureEach {
