@@ -67,9 +67,9 @@ public fun UnifyCoachmarkDemo() {
 @Composable
 private fun ColumnScope.PlotTextsAndUseLocalCoachMarkScope() {
 
-    CoachMarkTargetText("Will show tooltip 1", Alignment.Start, Keys.Text1, ToolTipPlacement.End)
+    CoachMarkTargetText("Will show tooltip 1", Alignment.Start, Keys.Text1, ToolTipPlacement.Bottom)
 
-    CoachMarkTargetText("Will show tooltip 2", Alignment.Start, Keys.Text2, ToolTipPlacement.End)
+    CoachMarkTargetText("Will show tooltip 2", Alignment.Start, Keys.Text2, ToolTipPlacement.Top)
 
     CoachMarkTargetText(
         "Will show tooltip to left",
@@ -125,32 +125,32 @@ private fun ColumnScope.CoachMarkTargetText(
 private fun Tooltip(key: CoachMarkKey) {
     when (key) {
         Keys.Text1 -> {
-            Balloon(arrow = Arrow.Start()) {
-                Text(text = "Highlighting Text1", color = Color.White)
+            Balloon {
+                MenuScreen()
             }
         }
 
         Keys.Text2 -> {
-            Balloon(arrow = Arrow.Start()) {
-                Text(text = "Highlighting Text2", color = Color.White)
+            Balloon {
+                MenuScreen()
             }
         }
 
         Keys.TextStart -> {
-            Balloon(arrow = Arrow.End()) {
+            Balloon {
                 Text(text = "A tooltip to the left", color = Color.White)
             }
         }
 
         Keys.TextBottom -> {
-            Balloon(arrow = Arrow.Top()) {
+            Balloon {
                 Text(text = "A tooltip below", color = Color.White)
             }
         }
 
         Keys.TextTop -> {
-            Balloon(arrow = Arrow.Bottom()) {
-                Text(text = "A tooltip above", color = Color.White)
+            Balloon {
+                MenuScreen()
             }
         }
     }

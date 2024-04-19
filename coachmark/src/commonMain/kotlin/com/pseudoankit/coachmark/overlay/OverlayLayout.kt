@@ -154,12 +154,12 @@ private fun Placeable.PlacementScope.place(placeable: Placeable?, config: Toolti
             }
 
             ToolTipPlacement.Top -> {
-                x = centerHorizontally()
-                y = layout.startY.toInt() - placeable.height
+                x = 0
+                y = layout.startY.toInt() - placeable.height - 12
             }
 
             ToolTipPlacement.Bottom -> {
-                x = centerHorizontally()
+                x = 0
                 y = layout.endY.toInt()
             }
         }
